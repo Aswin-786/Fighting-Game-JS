@@ -74,25 +74,31 @@ class Player {
   strike (player, enemy, attackDmg) {
     
     // Get random number between 1 - 10 and that is damageAmount
-
+    let damageAmount = Math.floor( Math.random() * attackDmg)
     // Subtract the enemy health with the damageAmount
+    enemy.health -= damageAmount
 
     //  Update the game and DOM with updateGame()
+    updateGame(player, enemy, game.isOver)
 
     //  Return a message of 'player name attacks enemy name for damageAmount'
+    return `${player.name} attacks ${enemy.name} ${damageAmount}`
 
   }
   // ** Heal the player for random number from  1 to 5 **
   heal (player) {
     
     // Get random number between 1 - 5 and store that in hpAmount
+    let hpAmount = Math.floor( Math.random() * this.attackDmg)
 
     // Add hpAmount to players health
+    player.health += hpAmount
 
     //  Update the game and DOM with updateGame()
+    updateGame(p1, p2, game.isOver)
 
     //  Return a message of 'player name heals for hpAmount HP'
-
+    return `${player.name} heals for ${hpAmount} HP`
   }
 }
 
@@ -140,8 +146,8 @@ class Game {
 
 // ** Create 2 players using the player class **
 
-let player1 = new Player('Aswin', 100, game.isOver)
-let player2 = new Player('Ajith', 100, game.isOver)
+let player1 = new Player('Aswin', 100, 10)
+let player2 = new Player('Ajith', 100, 10)
 
 
 // ** Save original Player Data into a variable in order to reset **
@@ -149,7 +155,7 @@ let p1 = player1;
 let p2 = player2;
 console.log(p1)
 
-let game = new  game()
+let game = new  Game()
 updateGame(p1,p2,10)
 
 // ** Create the game object from the Game class **
@@ -201,4 +207,6 @@ document.addEventListener('keydown', function(e) {
 
 
 
-
+console.log(p1.strike(p1, p2,p1.attackDmg))
+// console.log(p2.strike(p2, p1,p2.attackDmg))
+console.log(p1.heal(p1))
