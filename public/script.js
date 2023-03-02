@@ -114,8 +114,34 @@ class Game {
 
 
 
-let player1 = new Player('Aswin', 100, 10)
-let player2 = new Player('Ajith', 100, 10)
+// let player1 = new Player('Aswin', 100, 10)
+// let player2 = new Player('Ajith', 100, 10)
+let names
+let pl1_name
+let pl2_name
+
+let name = JSON.parse(localStorage.getItem("names"))
+console.log((name));
+
+if(name== null) {
+  pl1_name='Player 1'
+  pl2_name = 'player 2'
+
+} else {
+  pl1_name= name[0]
+  pl2_name = name[1]
+}
+
+let player1 = new Player(pl1_name.toUpperCase(), 100, 10)
+let player2 = new Player(pl2_name.toUpperCase(), 100, 10)
+
+
+// when screen refreshed back to player name page
+if (performance.navigation.type === 1) {
+  // page was just refreshed:
+  window.location.href = '../pop-up/index.html'
+}
+
 
 
 // Save original Player Data into a variable in order to reset
@@ -175,3 +201,5 @@ document.addEventListener('keydown', function(e) {
     document.getElementById('p2heal').play()
   }
 });
+
+
