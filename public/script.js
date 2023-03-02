@@ -188,7 +188,6 @@ document.addEventListener('keydown', function(e) {
   // if press p AND enemy health is greater than 0 AND isOver is still false then stike()
   if(e.key == 'p' && p1.health >= 0 && game.isOver == false) {
     p2.strike(p2, p1, p2.attackDmg)
-
     document.getElementById('p2attack').play()
   }
   });
@@ -197,9 +196,27 @@ document.addEventListener('keydown', function(e) {
   // if press l AND the player health is greater than 0 AND isOver is still false then heal()
   if(e.key == 'l' && p1.health >= 0 && game.isOver == false) {
     p2.heal(p2)
-
     document.getElementById('p2heal').play()
   }
 });
 
 
+const attackOne = () => {
+  player1.strike(player1, player2, player1.attackDmg)
+  document.getElementById('p1attack').play()
+}
+
+const healOne = () => {
+  player1.heal(player1)
+  document.getElementById('p1heal').play()
+}
+
+const attackTwo = () => {
+  player2.strike(player2, player1, player2.attackDmg)
+  document.getElementById('p2attack').play()
+}
+
+const healTwo = () => {
+  player2.heal(player2)
+  document.getElementById('p2heal').play()
+}

@@ -22,13 +22,13 @@
           <div class="playerControls">
             <div class="AttackDiv">
               <h3>Q:</h3>
-              <button onclick = "player1.strike(player1, player2, player1.attackDmg)" id="attack">
+              <button onclick = "attackOne()" id="attack">
                 Attack
               </button>
             </div>
             <div class="HealDiv">
               <h3>A:</h3>
-              <button onclick = "player1.heal(player1)" id="heal" >
+              <button onclick = "healOne()" id="heal" >
                 Heal
               </button>
               </div>
@@ -41,13 +41,13 @@
           <div class="playerControls">
             <div class="AttackDiv">
               <h3>P:</h3>
-              <button  onclick = "player2.strike(player2, player1, player2.attackDmg)" id="attack">
+              <button  onclick = "attackTwo()" id="attack">
                 Attack
               </button>
             </div>
             <div class="HealDiv">
               <h3>L:</h3>          
-              <button onclick = "player2.heal(player2)" id="heal">
+              <button onclick = "healTwo()" id="heal">
                 Heal
               </button>
             </div>
