@@ -87,3 +87,9 @@ button:hover {
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
+
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    width: 250px;
+  }
+}
