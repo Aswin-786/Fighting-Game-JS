@@ -139,7 +139,7 @@ let player2 = new Player(pl2_name.toUpperCase(), 100, 10)
 // when screen refreshed back to player name page
 if (performance.navigation.type === 1) {
   // page was just refreshed:
-  window.location.href = '../pop-up/index.html'
+  window.location.href = '../index.html'
 }
 
 
