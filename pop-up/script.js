@@ -1,13 +1,6 @@
 // Get the modal
 var modal = document.getElementById('id01');
 
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
-
 // get the inputs
 let pl1 = document.getElementById("pl1")
 let pl2 = document.getElementById("pl2")
@@ -32,3 +25,12 @@ window.onload = () => {
   pl1.value = ''
   pl2.value = ''
 }
+
+
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+
