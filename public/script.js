@@ -128,8 +128,6 @@ class Game {
 
 }
 
-
-
 // let player1 = new Player('Aswin', 100, 10)
 // let player2 = new Player('Ajith', 100, 10)
 let names
@@ -153,12 +151,10 @@ let player2 = new Player(pl2_name.toUpperCase(), 100, 10)
 
 
 // when screen refreshed back to player name page
-// if (performance.navigation.type === 1) {
-//   // page was just refreshed:
-//   window.location.href = '../index.html'
-// }
-
-
+if (performance.navigation.type === 1) {
+  // page was just refreshed:
+  window.location.href = '../index.html'
+}
 
 // Save original Player Data into a variable in order to reset
 let p1 = player1;
