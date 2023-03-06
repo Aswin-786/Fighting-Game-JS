@@ -36,7 +36,7 @@ main {
 }
 
 .grid .title h1 {
-  margin: 0;
+  margin: 0 0 25px 0;
 }
 
 .game-body {
@@ -149,7 +149,7 @@ main {
 
 #reset:hover,
 #play:hover {
-  box-shadow: 1px 1px 5px rgb(216, 211, 211);
+  opacity: 0.9;
 }
 .resultContainer {
   display: grid;
