@@ -12,6 +12,18 @@ const updateGame = (p1,p2,gameState) => {
   p1HealthDiv.innerText = p1.health
   p2HealthDiv.innerText = p2.health
 
+  // if p1 health reaches above 100 after healing
+  if(p1.health > 100) {
+    p1.health = 100
+    updateGame(p1, p2, game.isOver)
+  }
+
+  // if p2 health reaches above 100 after healing
+  if(p2.health > 100) {
+    p2.health = 100
+    updateGame(p1, p2, game.isOver)
+  }
+
   // Condition IF either player health is <= 0 then set isOver to true and declareWinner
   if(p1.health <= 0 || p2.health <= 0 ) {
     game.isOver = true
@@ -68,13 +80,17 @@ class Game {
   // player has 0 health declare the winner! 
   declareWinner(isOver,p1, p2) {
     
-    let message = 'TIE'
+    let message 
 
     if(isOver == true && p1.health <= 0 ) {
       message = `${p2.name} WINS!`
     }
     else if(isOver == true && p2.health <= 0) {
       message = `${p1.name} WINS!`
+    } else if (isOver == true && p2.health < p1.health ) {
+      message = `${p1.name} WINS!`
+    } else if (isOver == true && p2.health > p1.health ) {
+      message = `${p2.name} WINS!`
     }
 
     // Play victory sound
@@ -137,10 +153,10 @@ let player2 = new Player(pl2_name.toUpperCase(), 100, 10)
 
 
 // when screen refreshed back to player name page
-if (performance.navigation.type === 1) {
-  // page was just refreshed:
-  window.location.href = '../index.html'
-}
+// if (performance.navigation.type === 1) {
+//   // page was just refreshed:
+//   window.location.href = '../index.html'
+// }
 
 
 
