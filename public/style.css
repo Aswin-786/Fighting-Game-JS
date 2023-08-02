@@ -47,8 +47,8 @@ main {
 
 #p1,
 #p2 {
-  width:200px;
-  height:300px;
+  width: 200px;
+  height: 300px;
 }
 
 .p1Info,
@@ -74,12 +74,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
- 
 }
 
-.AttackDiv{
+.AttackDiv {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-around;
   height: 40px;
   width: 100px;
@@ -87,7 +86,7 @@ main {
 
 .HealDiv {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-around;
   height: 40px;
   width: 100px;
@@ -97,22 +96,20 @@ main {
   height: 30px;
   width: 60px;
   border-radius: 50px;
-  border:none;
+  border: none;
   background: #FFFF01;
   outline: none;
   cursor: pointer;
-
 }
 
 #heal {
   height: 30px;
   width: 60px;
   border-radius: 50px;
-  border:none;
+  border: none;
   background: #7DFFFF;
   outline: none;
   cursor: pointer;
-
 }
 
 .resulter {
@@ -123,7 +120,7 @@ main {
   height: 40px;
   width: 120px;
   border-radius: 20px;
-  border:none;
+  border: none;
   background: #02cf02;
   outline: none;
   color: white;
@@ -133,14 +130,14 @@ main {
 
 #result {
   font-size: 45px;
-  color : #3dff3d;
+  color: #3dff3d;
 }
 
 #reset {
   height: 40px;
   width: 120px;
   border-radius: 20px;
-  border:none;
+  border: none;
   background: #FF8800;
   outline: none;
   color: white;
@@ -151,60 +148,57 @@ main {
 #play:hover {
   opacity: 0.9;
 }
+
 .resultContainer {
   display: grid;
   grid-template-rows: 60px auto;
 }
 
-
-
 @media only screen and (max-width: 600px) {
-  
   .grid .title {
     font-size: 25px;
     margin-bottom: 15px;
   }
-  
+
   .game-body {
     column-gap: 10px;
   }
-  
+
   #p1,
   #p2 {
-    width:140px;
-    height:200px;
+    width: 140px;
+    height: 200px;
   }
-  
+
   .p1Info,
   .p2Info {
     width: 150px;
   }
-  
+
   #p1Name,
   #p2Name {
     font-size: 20px;
   }
-  
+
   #p1Health,
   #p2Health {
     font-size: 40px;
   }
-  
+
   .AttackDiv,
   .HealDiv {
     margin: 5px;
     height: 30px;
     width: 90px;
   }
-  
+
   #play,
   #reset {
     height: 40px;
     width: 100px;
   }
-  
+
   #result {
     font-size: 45px;
   }
-  
 }
